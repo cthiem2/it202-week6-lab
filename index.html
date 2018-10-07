@@ -1,0 +1,108 @@
+<!Doctype html>
+<html>
+	<body>
+		
+		<canvas id="myCanvas" width="500" height="500"
+				style="border:1px solid black;"></canvas>
+		
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.fillStyle = "lightgreen";
+			ctx.fillRect(0, 0, c.width, c.height);
+			
+			
+			function letterC(height, width, color){
+				ctx.beginPath();
+				var startx = 137.5;
+				var starty = 300;
+				ctx.moveTo(startx,starty);
+				ctx.lineTo(startx,starty-height);
+				ctx.lineTo(startx+width,starty-height);
+ 				ctx.lineTo(startx+width,starty-height+25);
+				ctx.lineTo(startx+25, starty-75);
+				ctx.lineTo(startx+25, starty-25);
+				ctx.lineTo(startx+width, starty-25);
+				ctx.lineTo(startx+width, starty);
+				ctx.lineTo(startx, starty);
+				ctx.strokeStyle=color;
+				ctx.stroke();
+
+			}
+			
+			function letterW(height, width, color){
+				ctx.beginPath();
+				var startx = 212.5;
+				var starty = 200;
+				ctx.moveTo(startx,starty);
+				ctx.lineTo(startx+15, starty);
+				ctx.lineTo(startx+15+7.5, starty+height-15);
+				ctx.lineTo(startx+30, starty);
+				ctx.lineTo(startx+45, starty);
+				ctx.lineTo(startx+45+7.5, starty+height-15);
+				ctx.lineTo(startx+60, starty);
+				ctx.lineTo(startx+width, starty);
+				ctx.lineTo(startx+width-15, starty+height);
+				ctx.lineTo(startx+45, starty+height);
+				ctx.lineTo(startx+45-7.5, starty+15);
+				ctx.lineTo(startx+30, starty+height);
+				ctx.lineTo(startx+15, starty+height);
+				ctx.lineTo(startx, starty);
+				ctx.strokeStyle=color;
+				ctx.stroke();
+			}
+			
+			function letterT(height, width, color){
+				ctx.beginPath();
+				var startx = 362.5;
+				var starty = 200;
+				ctx.moveTo(startx,starty);
+				ctx.lineTo(startx-width, starty);
+				ctx.lineTo(startx-width, starty+16.6);
+				ctx.lineTo(startx-width+16.6, starty+16.6);
+				ctx.lineTo(startx-width+16.6, starty+height);
+				ctx.lineTo(startx-width+33.3, starty+height);
+				ctx.lineTo(startx-width+33.3, starty+16.6);
+				ctx.lineTo(startx, starty+16.6);
+				ctx.lineTo(startx, starty);
+				ctx.strokeStyle=color;
+				ctx.stroke();
+
+			}
+			
+			
+			
+			
+			letterC(100, 50, "red");
+			letterW(100, 75, "orange");
+			letterT(100, 50, "blue");
+			
+			
+// 			var circle = {x: c.width,
+// 						  y: 100,
+// 						 dir: -2,
+// 						 radius: 8}
+// 			function draw(){
+// 				ctx.clearRect(0,0,c.width, c.height);
+// 				ctx.beginPath();
+// 				ctx.arc(circle.x,circle.y,circle.radius,0,2*Math.PI);
+// 				ctx.stroke();
+// // 				if(circle.x<=circle.radius){
+// // 					circle.x = circle.radius;
+// // 					circle.dir = 2;
+// // 				}
+// 				if(circle.x <= 0){
+// 					circle.x = c.width;
+// 					circle.y = Math.floor(Math.random() * c.height);
+// 				}
+// 				circle.x += circle.dir;
+// 				window.requestAnimationFrame(draw);
+// 			}
+			
+// 			draw();
+		
+		
+		</script>
+		
+	</body>
+</html>
